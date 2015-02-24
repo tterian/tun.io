@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tunApp">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title><%= content_for?(:title) ? yield(:title) : "tun.io" %></title>
+
+		<script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+		<%= stylesheet_link_tag    "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+
+	<body>
+
+		<div ng-view>
+			<%= yield %>
+		</div>
+		<%= javascript_include_tag "application" %>
+
+	</body>
+
+</html>
+
+

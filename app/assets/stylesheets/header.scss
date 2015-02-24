@@ -1,0 +1,30 @@
+$emerald		: #2ECC71;
+$white 			: #FFFFFF;
+$mehmeh 		: #6A709E;
+
+.navbar {
+	font-weight: 300 !important;
+	font-style: normal !important;
+
+	border-radius: 0 !important;	
+	background-color: $mehmeh;
+	a, a:hover {
+		color: $white;
+			font-family: 'Lato', sans-serif !important;
+			font-weight: 300 !important;
+			font-style: normal !important;
+	}
+
+}
+
+button:before {
+	color: $white !important;
+}
+
+.navbar-collapse {
+	button, button:hover {
+		background-color: $white !important;
+		color: $mehmeh;
+		cursor: default;
+	}
+}

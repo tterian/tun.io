@@ -1,0 +1,61 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// http://design-seeds.com/home/entry/feathered-hues15
+
+$clouds 	: #ECF0F1;
+$white 		: #FFFFFF;
+$emerald	: #2ECC71;
+$mehmeh 	: #6A709E;
+$grey 		: #AD9782;
+
+
+.panel {
+	padding: 10px 10px 10px 10px;
+	background-color: $clouds !important;
+
+}
+
+.filter-tab {
+	padding: 10px 0 0 0;
+}
+
+
+.btn-primary {
+	background-color: $emerald !important;
+}
+
+.form-control {
+	margin-right: 15px;
+}
+.form-control:focus {
+	border-color: $grey !important;
+}
+.multiselect {
+	border-color: $grey !important;	
+}
+.select2-search-choice {
+  background-color: $grey !important;
+}
+
+.select2-result-label {
+  background-color: $clouds !important;
+}
+.select2-result-label:hover {
+  background-color: $white !important;
+}
+.select2-result-label:active {
+  background-color: $grey !important;
+}
+.select2-choice {
+	background-color: $grey !important;
+}
+
+.map-tab {
+	position: relative;
+	.map-content {
+		.angular-google-map-container { 
+			height: 600px;
+		}
+	}
+}

@@ -1,0 +1,104 @@
+<!-- Navbar -->
+<nav class="navbar" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+			<span class="sr-only">Toggle navigation</span>
+		</button>
+
+		<a class="navbar-brand" href="#">
+			<span class="fui-home"></span>
+			<span>tun.io</span>
+		</a>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbar-collapse-01">
+<!--		<ul class="nav navbar-nav">
+			<li><a href="/buy">Buy</a></li>
+			<li><a href="/sell">Sell</a></li>
+			<li><a href="/rent">Rent</a></li>
+		</ul>
+-->		
+		<a href="#/signin">
+			<button class="btn btn-default navbar-btn btn-sm navbar-right" type="button">Sign in</button>
+		</a>
+
+	</div>
+</nav>
+
+<!-- Body -->
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="panel">
+			
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search" id="search-query-3">
+				<span class="input-group-btn">
+					<button type="submit" class="btn"><span class="fui-search"></span></button>
+				</span>
+			</div>
+			
+			<div class="filter-tab">
+				<select multiple="multiple" class="form-control multiselect multiselect-info">
+					<option value="0" selected>Buy</option>
+					<option value="1" selected>Rent</option>
+				</select>
+
+				<select class="form-control select select-primary select-block mbl">
+					<option value="0">Min Price</option>
+					<option value="1">$10.000</option>
+					<option value="3">$20.000</option>
+					<option value="4">$30.000</option>
+				</select>
+
+				<select class="form-control select select-primary select-block mbl">
+					<option value="0">Max Price</option>
+					<option value="1">$10.000</option>
+					<option value="3">$20.000</option>
+					<option value="4">$30.000</option>
+				</select>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="map-tab panel">
+			<div class="map-list">
+	
+			</div>
+
+			<div class="map-content">
+				<ui-gmap-google-map center='map.center' zoom='map.zoom' options='options' draggable='true'>
+					<ui-gmap-markers models="places" coords="'location'" icon="'icon'"></ui-gmap-markers>
+				</ui-gmap-google-map>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+	<div class="row">
+		<div class="col-sm-4 footer-tab">
+			<img src="assets/flat-ui/dist/img/icons/svg/map.svg" alt="Map">
+			<p>tun.io is designed to make estate buying or renting a pleasure. Our main focus goes to user experience. So we work hard for you to make your daily routine more joyful and fun. Here in tun.io we believe in simplicity and laconizm. You will be nicely surprised how much we reduced the amount efforts required to search for an estate!</p>
+		</div>
+
+		<div class="col-sm-4 footer-tab">
+	  		<img src="assets/flat-ui/dist/img/icons/svg/pencils.svg" alt="Pencils">
+			<p>I am a full-stack programmer and everything you see here was designed and developped by me. Well, I enjoyed the process of creating this webpage. I used the latest tech modules while crafting this webpage. Follow me if you want to see more nice web-pieces!</p>
+		</div>
+
+		<div class="col-sm-4 footer-tab">
+			<h4>Follow Me</h4>
+				<p><a href="https://github.com/tterian">GitHub</a></p>
+				<p><a href="https://www.facebook.com/Tigran.Terian">Facebook</a></p>
+				<p><a href="https://twitter.com/TigranTerian">Twitter</a></p>
+		</div>
+	</div>
+</footer> 

@@ -1,0 +1,15 @@
+var tunApp = angular.module('tunApp', [
+	'ngResource', 
+	'ngRoute',
+	'uiGmapgoogle-maps',
+	'tunControllers'
+	]);
+
+tunApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+	  $routeProvider
+		.when('/', {
+			controller: 'tunIndexController',    
+			templateUrl: "<%= asset_path('angular-app/templates/index.html') %>" 
+		})
+		.otherwise({redirectTo: '/'});
+}]);
