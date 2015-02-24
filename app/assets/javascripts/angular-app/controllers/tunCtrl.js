@@ -1,6 +1,6 @@
 var tunControllers = angular.module('tunControllers', []);
 
-tunControllers.controller('tunIndexController', ['$scope', '$location', function($scope, $location) {
+tunControllers.controller('tunIndexController', ['$scope', '$location', 'Estate', function($scope, $location, Estate) {
 	//add selection js
 	$("select").select2({dropdownCssClass: 'dropdown-inverse'});
 
@@ -22,6 +22,9 @@ tunControllers.controller('tunIndexController', ['$scope', '$location', function
 		},
 		zoom: 13
 	};
+
+	//get the data from API
+	$scope.items = Estate.query();
 
 	//add test locations for markers
 	$scope.places = [{
