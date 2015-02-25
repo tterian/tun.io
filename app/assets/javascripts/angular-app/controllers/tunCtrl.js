@@ -23,18 +23,10 @@ tunControllers.controller('tunIndexController', ['$scope', '$location', 'Estate'
 		zoom: 13
 	};
 
-	//get the data from API
-	$scope.items = Estate.query();
+	//query data from API
+	$scope.markers = Estate.query();
 
-	//add test locations for markers
-	$scope.places = [{
-		id: "first",
-		stuff: "mehmeh",
-		location: {
-			latitude: 40.181319,
-			longitude: 44.515976
-		}
-	}];
+	//marker window options
 
 
 

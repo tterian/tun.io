@@ -64,6 +64,7 @@
 </div>
 
 
+<!-- Map and shit -->
 <div class="row">
 	<div class="col-md-12">
 		<div class="map-tab panel">
@@ -73,7 +74,12 @@
 
 			<div class="map-content">
 				<ui-gmap-google-map center='map.center' zoom='map.zoom' options='options' draggable='true'>
-					<ui-gmap-markers models="places" coords="'location'" icon="'icon'"></ui-gmap-markers>
+
+					<ui-gmap-markers models="markers" idKey="id" coords="'self'" icon="'icon'" click="'onClick'">
+            			<ui-gmap-windows show="show">
+                			<div ng-non-bindable>{{address}}</div>
+            			</ui-gmap-windows>
+					</ui-gmap-markers>
 				</ui-gmap-google-map>
 			</div>
 		</div>
@@ -90,7 +96,7 @@
 		</div>
 
 		<div class="col-sm-4 footer-tab">
-	  		<img src="assets/flat-ui/dist/img/icons/svg/pencils.svg" alt="Pencils">
+			<img src="assets/flat-ui/dist/img/icons/svg/pencils.svg" alt="Pencils">
 			<p>I am a full-stack programmer and everything you see here was designed and developped by me. Well, I enjoyed the process of creating this webpage. I used the latest tech modules while crafting this webpage. Follow me if you want to see more nice web-pieces!</p>
 		</div>
 
