@@ -29,5 +29,4 @@ tunControllers.controller('tunIndexController', ['$scope', '$location', 'Estate'
 	//marker window options
 
 
-
 }]);

@@ -76,9 +76,13 @@
 				<ui-gmap-google-map center='map.center' zoom='map.zoom' options='options' draggable='true'>
 
 					<ui-gmap-markers models="markers" idKey="id" coords="'self'" icon="'icon'" click="'onClick'">
-            			<ui-gmap-windows show="show">
-                			<div ng-non-bindable>{{address}}</div>
-            			</ui-gmap-windows>
+						<ui-gmap-windows show="show" closeClick="'closeClick'">
+							<div ng-non-bindable>
+								<span class="span-class">{{address}}</span>
+								<span class="span-class">rooms: {{rooms}}</span>
+								<p>{{price | currency:"$":0}}</p>
+							</div>
+						</ui-gmap-windows>
 					</ui-gmap-markers>
 				</ui-gmap-google-map>
 			</div>
