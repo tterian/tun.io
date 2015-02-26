@@ -32,26 +32,14 @@
 			</div>
 			
 			<div class="filter-tab">
-				<select multiple="multiple" class="form-control multiselect multiselect-info">
-					<option value="0" selected>Buy</option>
-					<option value="1" selected>Rent</option>
+				<select ng-model="sellOption"
+						ng-init="sellOption = 0"
+						class="form-control mySelect">
+					<option value="0">Sell</option>
+					<option value="1">Rent</option>
 				</select>
-
-				<select class="form-control select select-primary select-block mbl">
-					<option value="0">Min Price</option>
-					<option value="1">$10.000</option>
-					<option value="3">$20.000</option>
-					<option value="4">$30.000</option>
-				</select>
-
-				<select class="form-control select select-primary select-block mbl">
-					<option value="0">Max Price</option>
-					<option value="1">$10.000</option>
-					<option value="3">$20.000</option>
-					<option value="4">$30.000</option>
-				</select>
-
 			</div>
+
 		</div>
 	</div>
 </div>
@@ -68,7 +56,9 @@
 			<div class="map-content">
 				<ui-gmap-google-map center='map.center' zoom='map.zoom' options='options' draggable='true'>
 
-					<ui-gmap-marker ng-repeat="m in markers | filter:query" idKey="m.id" coords="m" icon="m.icon">
+					<ui-gmap-marker ng-repeat="m in markers | filter:query 
+															| filter:{category:sellOption}" 
+															idKey="m.id" coords="m" icon="m.icon">
 						<ui-gmap-window show="m.show">
 							<div class="info-window">
 								<span class="span-class">{{m.address}}</span>

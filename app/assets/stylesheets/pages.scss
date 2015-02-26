@@ -35,25 +35,28 @@ $grey 		: #AD9782;
 .form-control:focus {
 	border-color: $grey !important;
 }
-.multiselect {
-	border-color: $grey !important;	
-}
-.select2-search-choice {
-  background-color: $grey !important;
+
+
+.mySelect {
+	-webkit-appearance: none;
+	height: 45px;
+	padding: 10px 10px;
+	font-size: 17px;
+	line-height: 1.235;
+	border-radius: 6px;
+
+	border-color: transparent !important;
+	background-color: $grey !important;
+	color: $white !important;
 }
 
-.select2-result-label {
-  background-color: $clouds !important;
+.mySelect > option {
+	background: $white !important;
+	border-radius: 6px !important;
+	border-color: transparent !important;
+	color: $grey;
 }
-.select2-result-label:hover {
-  background-color: $white !important;
-}
-.select2-result-label:active {
-  background-color: $grey !important;
-}
-.select2-choice {
-	background-color: $grey !important;
-}
+
 
 .map-tab {
 	position: relative;
@@ -63,3 +66,23 @@ $grey 		: #AD9782;
 		}
 	}
 }
+
+//.multiselect {
+//	border-color: $grey !important;	
+//}
+//.select2-search-choice {
+//  background-color: $grey !important;
+//}
+//
+//.select2-result-label {
+//  background-color: $clouds !important;
+//}
+//.select2-result-label:hover {
+//  background-color: $white !important;
+//}
+//.select2-result-label:active {
+//  background-color: $grey !important;
+//}
+//.select2-choice {
+//	background-color: $grey !important;
+//}

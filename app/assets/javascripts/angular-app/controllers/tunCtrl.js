@@ -1,8 +1,10 @@
 var tunControllers = angular.module('tunControllers', []);
 
+ 
+
 tunControllers.controller('tunIndexController', ['$scope', '$location', 'Estate', function($scope, $location, Estate) {
 	//add selection js
-	$("select").select2({dropdownCssClass: 'dropdown-inverse'});
+//	$("select").select2({dropdownCssClass: 'dropdown-inverse'});
 
 	//add a custom style for my map (Blue Essence)
 	var styleArray = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
@@ -25,6 +27,5 @@ tunControllers.controller('tunIndexController', ['$scope', '$location', 'Estate'
 
 	//query data from API
 	$scope.markers = Estate.query();
-
 
 }]);
