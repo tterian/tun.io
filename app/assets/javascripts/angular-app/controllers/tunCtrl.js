@@ -26,7 +26,5 @@ tunControllers.controller('tunIndexController', ['$scope', '$location', 'Estate'
 	//query data from API
 	$scope.markers = Estate.query();
 
-	//marker window options
-
 
 }]);

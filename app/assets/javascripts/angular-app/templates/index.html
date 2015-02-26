@@ -5,19 +5,13 @@
 			<span class="sr-only">Toggle navigation</span>
 		</button>
 
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="#/">
 			<span class="fui-home"></span>
 			<span>tun.io</span>
 		</a>
 	</div>
 
-	<div class="collapse navbar-collapse" id="navbar-collapse-01">
-<!--		<ul class="nav navbar-nav">
-			<li><a href="/buy">Buy</a></li>
-			<li><a href="/sell">Sell</a></li>
-			<li><a href="/rent">Rent</a></li>
-		</ul>
--->		
+	<div class="collapse navbar-collapse" id="navbar-collapse-01">	
 		<a href="#/signin">
 			<button class="btn btn-default navbar-btn btn-sm navbar-right" type="button">Sign in</button>
 		</a>
@@ -31,7 +25,7 @@
 		<div class="panel">
 			
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search" id="search-query-3">
+				<input ng-model="query" type="text" class="form-control" placeholder="Search an estate">
 				<span class="input-group-btn">
 					<button type="submit" class="btn"><span class="fui-search"></span></button>
 				</span>
@@ -58,13 +52,12 @@
 				</select>
 
 			</div>
-
 		</div>
 	</div>
 </div>
 
 
-<!-- Map and shit -->
+<!-- Map -->
 <div class="row">
 	<div class="col-md-12">
 		<div class="map-tab panel">
@@ -75,17 +68,18 @@
 			<div class="map-content">
 				<ui-gmap-google-map center='map.center' zoom='map.zoom' options='options' draggable='true'>
 
-					<ui-gmap-markers models="markers" idKey="id" coords="'self'" icon="'icon'" click="'onClick'">
-						<ui-gmap-windows show="show" closeClick="'closeClick'">
-							<div ng-non-bindable>
-								<span class="span-class">{{address}}</span>
-								<span class="span-class">rooms: {{rooms}}</span>
-								<p>{{price | currency:"$":0}}</p>
+					<ui-gmap-marker ng-repeat="m in markers | filter:query" idKey="m.id" coords="m" icon="m.icon">
+						<ui-gmap-window show="m.show">
+							<div class="info-window">
+								<span class="span-class">{{m.address}}</span>
+								<span class="span-class">rooms: {{m.rooms}}</span>
+								<p>{{m.price | currency:"$":0}}</p>
 							</div>
-						</ui-gmap-windows>
-					</ui-gmap-markers>
+						</ui-gmap-window>
+					</ui-gmap-marker>
 				</ui-gmap-google-map>
 			</div>
+
 		</div>
 	</div>
 </div>
@@ -101,7 +95,7 @@
 
 		<div class="col-sm-4 footer-tab">
 			<img src="assets/flat-ui/dist/img/icons/svg/pencils.svg" alt="Pencils">
-			<p>I am a full-stack programmer and everything you see here was designed and developped by me. Well, I enjoyed the process of creating this webpage. I used the latest tech modules while crafting this webpage. Follow me if you want to see more nice web-pieces!</p>
+			<p>Well, this is a simple showcase of google maps flavored with Flat UI framwork. Couple of words about me: I am a full-stack programmer and just a coding enthusiast. This was my first project employing google maps API tied with a flat UI, crafted with love and care. Follow me if you want to see more nice web-pieces!</p>
 		</div>
 
 		<div class="col-sm-4 footer-tab">
