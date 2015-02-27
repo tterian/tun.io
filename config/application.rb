@@ -21,9 +21,11 @@ module TunIo
     # config.i18n.default_locale = :de
     config.serve_static_assets = true
     config.assets.compile = true
+    config.assets.enabled = true
     config.assets.paths << Rails.root.join("lib","assets","bower_components")
     config.assets.paths << Rails.root.join("lib","assets","bower_components","flat-ui")
-    config.assets.paths << Rails.root.join("lib","assets","bower_components","flat-ui","dist","fonts")
+    config.assets.paths << Rails.root.join("lib","assets","bower_components","flat-ui","dist","fonts","glyphicons")
+    config.assets.paths << Rails.root.join("lib","assets","bower_components","flat-ui","dist","fonts","lato")
     config.assets.precompile += %w( .svg .eot .woff .ttf )
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
