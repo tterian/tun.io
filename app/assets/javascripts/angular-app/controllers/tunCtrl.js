@@ -22,7 +22,7 @@ tunControllers.controller('tunIndexController', ['$scope', '$location', 'Estate'
 			latitude: 40.180282,
 			longitude:  44.516891
 		},
-		zoom: 13
+		zoom: 15
 	};
 
 	//query data from API
