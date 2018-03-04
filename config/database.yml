@@ -25,19 +25,19 @@ development:
   database: db/tunio_development
   host: localhost
   username: tigranas
-  password: Virl645830
+  password:
 
 test:
   <<: *default
   database: db/tunio_test
   host: localhost
   username: tigranas
-  password: Virl645830
+  password:
 
 production:
   <<: *default
   database: db/tunio_production
   host: localhost
   username: tigranas
-  password: Virl645830
+  password:
 
